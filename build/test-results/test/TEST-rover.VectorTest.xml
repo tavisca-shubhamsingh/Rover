@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="rover.VectorTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2019-08-13T13:01:18" hostname="RENTLAPT0019" time="0.193">
+<testsuite name="rover.VectorTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2019-08-14T04:47:37" hostname="RENTLAPT0019" time="0.067">
   <properties/>
-  <testcase name="movingFromEast()" classname="rover.VectorTest" time="0.051"/>
+  <testcase name="movingFromEast()" classname="rover.VectorTest" time="0.035"/>
   <testcase name="movingFromWest()" classname="rover.VectorTest" time="0.001"/>
-  <testcase name="vectorCanRotateRightFromEast()" classname="rover.VectorTest" time="0.001"/>
-  <testcase name="vectorCanRotateRightFromWest()" classname="rover.VectorTest" time="0.002"/>
-  <testcase name="vectorCanRotateLeftFromEast()" classname="rover.VectorTest" time="0.001"/>
-  <testcase name="vectorCanRotateLeftFromWest()" classname="rover.VectorTest" time="0.001"/>
-  <testcase name="vectorCanRotateRightFromNorth()" classname="rover.VectorTest" time="0.0"/>
-  <testcase name="vectorCanRotateRightFromSouth()" classname="rover.VectorTest" time="0.021"/>
-  <testcase name="movingFromNorth()" classname="rover.VectorTest" time="0.002"/>
-  <testcase name="movingFromSouth()" classname="rover.VectorTest" time="0.003"/>
-  <testcase name="vectorCanRotateLeftFromNorth()" classname="rover.VectorTest" time="0.003"/>
-  <testcase name="vectorCanRotateLeftFromSouth()" classname="rover.VectorTest" time="0.01"/>
-  <testcase name="vectorInitializeWithStartingPosition()" classname="rover.VectorTest" time="0.005"/>
+  <testcase name="vectorCanRotateRightFromEast()" classname="rover.VectorTest" time="0.002"/>
+  <testcase name="vectorCanRotateRightFromWest()" classname="rover.VectorTest" time="0.001"/>
+  <testcase name="vectorCanRotateLeftFromEast()" classname="rover.VectorTest" time="0.0"/>
+  <testcase name="vectorCanRotateLeftFromWest()" classname="rover.VectorTest" time="0.003"/>
+  <testcase name="vectorCanRotateRightFromNorth()" classname="rover.VectorTest" time="0.005"/>
+  <testcase name="vectorCanRotateRightFromSouth()" classname="rover.VectorTest" time="0.001"/>
+  <testcase name="movingFromNorth()" classname="rover.VectorTest" time="0.001"/>
+  <testcase name="movingFromSouth()" classname="rover.VectorTest" time="0.001"/>
+  <testcase name="vectorCanRotateLeftFromNorth()" classname="rover.VectorTest" time="0.001"/>
+  <testcase name="vectorCanRotateLeftFromSouth()" classname="rover.VectorTest" time="0.002"/>
+  <testcase name="vectorInitializeWithStartingPosition()" classname="rover.VectorTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
