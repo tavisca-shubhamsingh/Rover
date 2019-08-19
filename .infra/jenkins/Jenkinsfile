@@ -36,7 +36,7 @@ pipeline {
             steps {
                 sh script: '''
                     docker login --username=shubhamsb25 --password=Shubham.rkt25
-                    docker build -t shubhamsb25/rover:first -f .infra/docker/Dockerfile .
+                    docker build -t shubhamsb25/rover:first -f ./.infra/docker/Dockerfile .
                     echo "I am Building DockerImage"
                 ''',
             label: "Building Docker Image"
