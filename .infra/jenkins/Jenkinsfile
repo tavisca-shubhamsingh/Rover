@@ -1,0 +1,66 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                sh script: '''
+                     chmod +x gradlew
+                    echo "I am in build step"
+                    ./gradlew build
+                ''',
+            label: "Building Project"
+            }
+        }
+        stage('Test')
+        {
+            steps {
+                sh script: '''
+                    chmod +x gradlew
+                    echo "I am in Test step"
+                    ./gradlew test
+                ''',
+            label: "Running Unit Test Cases"
+            }
+        }
+        stage('Static Code Analysis')
+        {
+            steps {
+                sh script: '''
+                    chmod +x gradlew
+                    ./gradlew sonarqube -Dsonar.projectKey=tavisca-shubhamsingh_Rover -Dsonar.organization=tavisca-shubhamsingh -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=e5d1b00163b8f7cd7c24103bfd98c9882cf4eae2
+                    echo "I am in Sonarqube scan"
+                ''',
+            label: "Running Sonarqube Scan"
+            }
+        }
+        stage('Build DockerImage')
+        {
+            steps {
+                sh script: '''
+                    echo "before building"
+                    docker build -t shubhamsb25/rover:first -f ./.infra/docker/Dockerfile .
+                    echo "I am Building DockerImage"
+                ''',
+            label: "Building Docker Image"
+            }
+        }
+        stage('Publish DockerImage')
+        {
+            steps {
+                sh script: '''
+                    docker login --username=shubhamsb25 --password=Shubham.rkt25
+                    docker push shubhamsb25/rover:first
+                    echo "I am Pubishing DockerImage"
+                ''',
+            label: "Publishing Docker Image"
+            }
+        }
+    }
+    post{
+    always
+    {
+    deleteDir()
+    }
+    }
+
+}
