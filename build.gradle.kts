@@ -1,7 +1,12 @@
 
 plugins {
     java
+    id("org.sonarqube") version "2.7.1"
 }
+
+
+
+
 
 group = "com.tavisca.workshops"
 version = "1.0-SNAPSHOT"
@@ -46,3 +51,4 @@ val jar by tasks.getting(Jar::class) {
         attributes["Main-Class"] = "rover.MarsRoboRover"
     }
 }
+
