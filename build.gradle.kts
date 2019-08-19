@@ -2,6 +2,7 @@
 plugins {
     java
 }
+
 group = "com.tavisca.workshops"
 version = "1.0-SNAPSHOT"
 repositories {
@@ -13,9 +14,10 @@ dependencies {
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.5.0")
 }
 configure<JavaPluginConvention> {
-    sourceCompatibility = JavaVersion.VERSION_1_10
-    targetCompatibility = JavaVersion.VERSION_1_10
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
 }
+
 tasks.register<Test>("hidden-tests")
 tasks.named<Test>("test") {
     dependsOn("cleanTest")
@@ -39,4 +41,8 @@ tasks.named<Test>("hidden-tests") {
     }
 }
 
-
+val jar by tasks.getting(Jar::class) {
+    manifest {
+        attributes["Main-Class"] = "rover.MarsRoboRover"
+    }
+}
