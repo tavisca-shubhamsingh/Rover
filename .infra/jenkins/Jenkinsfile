@@ -35,7 +35,7 @@ pipeline {
         {
             steps {
                 sh script: '''
-                    docker login --username=shubhamsb25 --password=Shubham.rkt25
+                    echo "before building"
                     docker build -t shubhamsb25/rover:first -f ./.infra/docker/Dockerfile .
                     echo "I am Building DockerImage"
                 ''',
@@ -46,7 +46,7 @@ pipeline {
         {
             steps {
                 sh script: '''
-
+                    docker login --username=shubhamsb25 --password=Shubham.rkt25
                     echo "I am Pubishing DockerImage"
                 ''',
             label: "Publishing Docker Image"
