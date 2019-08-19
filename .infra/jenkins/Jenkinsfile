@@ -27,7 +27,7 @@ pipeline {
             steps {
                 sh script: '''
                     chmod +x gradlew
-                    ./gradlew sonarqube -Dsonar.projectKey=rover -Dsonar.host.url=http://localhost:9000 -Dsonar.login=64159d68d55e719b095004d0f056c0b0ddbb5029
+                    ./gradlew sonarqube -Dsonar.projectKey=tavisca-shubhamsingh_Rover -Dsonar.organization=tavisca-shubhamsingh -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=e5d1b00163b8f7cd7c24103bfd98c9882cf4eae2
                     echo "I am in Sonarqube scan"
                 ''',
             label: "Running Sonarqube Scan"
